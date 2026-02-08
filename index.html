@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Eternas Santiago - Globos | Flores | Regalos | Arreglos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --primary-light: #ff6b6b;
+            --primary-dark: #c1121f;
+            --secondary-color: #f4a261;
+            --secondary-light: #ffb88a;
+            --accent-color: #a8dadc;
+            --accent-light: #caf0f8;
+            --light-color: #f1faee;
+            --dark-color: #1d3557;
+            --text-color: #333333;
+            --light-pink: #ffe8e8;
+            --light-beige: #f9f3e9;
+            --gold: #ffd166;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+            background-color: var(--light-beige);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Decoraciones florales */
+        .floral-decoration {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .floral-1 {
+            top: 10%;
+            left: 5%;
+            transform: rotate(15deg);
+            font-size: 120px;
+            color: var(--primary-color);
+        }
+        
+        .floral-2 {
+            bottom: 10%;
+            right: 5%;
+            transform: rotate(-15deg);
+            font-size: 100px;
+            color: var(--accent-color);
+        }
+        
+        /* Header y Navegación Mejorada */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 3px solid var(--light-pink);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            position: relative;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+        
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+            transition: var(--transition);
+        }
+        
+        .logo-img:hover {
+            transform: rotate(10deg) scale(1.05);
+            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.4);
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--dark-color);
+            position: relative;
+        }
+        
+        .logo-text span {
+            color: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tagline {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            font-style: italic;
+            margin-top: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 500;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            left: 0;
+            bottom: 0;
+            transition: var(--transition);
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+            background: linear-gradient(45deg, var(--primary-dark), var(--primary-color));
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            color: var(--dark-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-btn:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+        
+        /* Hero Section Mejorada */
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), 
+                        url('https://images.unsplash.com/photo-1597633611385-17238892a086?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 150px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(230, 57, 70, 0.05), rgba(168, 218, 220, 0.05));
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 4.2rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .hero h1 span {
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .hero h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: rgba(230, 57, 70, 0.2);
+            z-index: -1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-color);
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+        
+        .quote {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin: 30px auto 40px;
+            max-width: 700px;
+            padding: 25px;
+            border-left: 5px solid var(--primary-color);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out 0.7s both;
+        }
+        
+        .quote::before {
+            content: "❝";
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 60px;
+            color: var(--primary-color);
+            opacity: 0.2;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .quote::after {
+            content: "❞";
+            position: absolute;
+            bottom: -30px;
+            right: 10px;
+            font-size: 60px;
+            color: var(--primary-color);
+            opacity: 0.2;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(45deg, var(--dark-color), var(--primary-dark));
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .cta-button:hover::before {
+            width: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.4);
+        }
+        
+        .hero-decoration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23e63946'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%23a8dadc'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23f1faee'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+        
+        /* Sección Sobre Nosotros Mejorada */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 3.2rem;
+            color: var(--dark-color);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 20px auto 50px;
+            opacity: 0.8;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--dark-color);
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .about-text h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            border-radius: 5px;
+        }
+        
+        .business-info {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 248, 225, 0.9));
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: var(--shadow);
+            border: 2px solid rgba(230, 57, 70, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .business-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-item i {
+            color: var(--primary-color);
+            margin-right: 15px;
+            width: 25px;
+            font-size: 1.2rem;
+            background: rgba(230, 57, 70, 0.1);
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+        }
+        
+        .payment-methods {
+            margin-top: 30px;
+        }
+        
+        .payment-methods h4 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            font-size: 1.3rem;
+        }
+        
+        .payment-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .payment-icon {
+            background: linear-gradient(45deg, white, #f8f9fa);
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .payment-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            background: linear-gradient(45deg, var(--light-color), white);
+        }
+        
+        .payment-icon i {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .about-image:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(230, 57, 70, 0.1), rgba(168, 218, 220, 0.1));
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Sección Servicios Mejorada */
+        .services {
+            background-color: var(--light-pink);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e63946' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, white, #fefefe);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(230, 57, 70, 0.1);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-card:hover::before {
+            height: 100%;
+            opacity: 0.05;
+        }
+        
+        .service-icon {
+            font-size: 60px;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.2) rotate(10deg);
+            color: var(--primary-light);
+        }
+        
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-card p {
+            position: relative;
+            z-index: 2;
+            color: var(--text-color);
+        }
+        
+        /* Sección Testimonios Nueva */
+        .testimonials {
+            background: linear-gradient(135deg, var(--dark-color), #2a4365);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+        
+        .testimonial-slider {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 0 20px;
+        }
+        
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Sección Productos Mejorada */
+        .products {
+            position: relative;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            z-index: 3;
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+        }
+        
+        .product-img {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.2));
+            pointer-events: none;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .product-info p {
+            color: var(--text-color);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .price-note {
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .price-note i {
+            font-size: 1.2rem;
+        }
+        
+        .order-btn {
+            background: linear-gradient(45deg, var(--accent-color), var(--accent-light));
+            color: var(--dark-color);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .order-btn:hover {
+            background: linear-gradient(45deg, var(--secondary-color), var(--secondary-light));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(244, 162, 97, 0.3);
+        }
+        
+        /* Sección Estadísticas Nueva */
+        .stats {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+        
+        .stat-item {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Sección Pedido Mejorada */
+        .order-form-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, white, #fefefe);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: var(--shadow-hover);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(230, 57, 70, 0.1);
+        }
+        
+        .order-form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+        }
+        
+        .order-form h3 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+            position: relative;
+        }
+        
+        .order-instructions {
+            background: linear-gradient(135deg, #fff8e1, #fff3cd);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-left: 5px solid #ffb300;
+            position: relative;
+        }
+        
+        .order-instructions h4 {
+            color: #e65100;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .order-instructions ul {
+            padding-left: 20px;
+        }
+        
+        .order-instructions li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .order-instructions li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: -10px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+            font-size: 1.05rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(168, 218, 220, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .product-select {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .product-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: white;
+        }
+        
+        .product-option:hover {
+            border-color: var(--accent-color);
+            background-color: rgba(168, 218, 220, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .product-option.selected {
+            border-color: var(--primary-color);
+            background-color: rgba(230, 57, 70, 0.05);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.1);
+        }
+        
+        .product-option input {
+            width: auto;
+        }
+        
+        .product-option label {
+            flex: 1;
+            margin-bottom: 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.3);
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(45deg, var(--primary-dark), var(--primary-color));
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.4);
+        }
+        
+        /* Footer Mejorado */
+        footer {
+            background: linear-gradient(135deg, var(--dark-color), #2a4365);
+            color: white;
+            padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: white;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+        
+        .footer-column p {
+            margin-bottom: 18px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.3rem;
+        }
+        
+        .social-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        .footer-newsletter {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 25px;
+        }
+        
+        .footer-newsletter h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .newsletter-form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form button:hover {
+            background: var(--primary-dark);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .ceo-tag {
+            font-style: italic;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .quote-footer {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-top: 25px;
+            padding: 20px;
+            border-left: 3px solid var(--primary-color);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0 15px 15px 0;
+        }
+        
+        /* Botón flotante de WhatsApp Mejorado */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.15) rotate(15deg);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-float::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(37, 211, 102, 0.3);
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        
+        /* Modal de confirmación Mejorado */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, white, #fefefe);
+            border-radius: 25px;
+            padding: 50px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            animation: slideInUp 0.5s ease-out;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(230, 57, 70, 0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-color);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-close:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: rotate(90deg);
+        }
+        
+        .modal-icon {
+            font-size: 80px;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            animation: bounce 1s ease infinite alternate;
+        }
+        
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+        
+        .modal h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .modal p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        #orderSummary {
+            text-align: left;
+            background: rgba(230, 57, 70, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid var(--primary-color);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        .modal-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .modal-instagram-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #E4405F, #C13584);
+            color: white;
+            padding: 18px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .modal-instagram-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(228, 64, 95, 0.4);
+            background: linear-gradient(45deg, #C13584, #E4405F);
+        }
+        
+        .modal-whatsapp-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            padding: 18px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .modal-whatsapp-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(45deg, #128C7E, #25D366);
+        }
+        
+        /* Animaciones personalizadas */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(100px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-text, .about-image {
+                width: 100%;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                padding: 30px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 20px 20px;
+                backdrop-filter: blur(10px);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-cta {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .quote {
+                font-size: 1.8rem;
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .order-form-container {
+                padding: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 100px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .product-grid, .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-img {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 25px;
+                right: 25px;
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .modal-content {
+                padding: 30px;
+            }
+        }
+        
+        /* Efectos de scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Decoraciones florales -->
+    <div class="floral-decoration floral-1">
+        <i class="fas fa-leaf"></i>
+    </div>
+    <div class="floral-decoration floral-2">
+        <i class="fas fa-spa"></i>
+    </div>
+    
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <!-- LOGO DE FLORES ETERNAS SANTIAGO -->
+                    <img src="https://instagram.fsti6-1.fna.fbcdn.net/v/t51.2885-19/623884746_17936102865150565_1833048822969225444_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fsti6-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=RX0OJze6j5AQ7kNvwFhbq3b&_nc_gid=NbLTXAzVOCWlVWKkLs1IkA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfvGFwJTztN1oVttxwup7_-VSBJqUXi5IzugqvR8XagsMg&oe=698E7992&_nc_sid=7a9f4b" 
+                         alt="Flores Eternas Santiago" 
+                         class="logo-img">
+                    
+                    <div class="logo-text-container">
+                        <div class="logo-text">Flores <span>Eternas</span> Santiago</div>
+                        <div class="tagline">Globos | Flores | Regalos | Arreglos</div>
+                    </div>
+                </div>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+                    <a href="#sobre-nosotros"><i class="fas fa-info-circle"></i> Sobre Nosotros</a>
+                    <a href="#servicios"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                    <a href="#productos"><i class="fas fa-store"></i> Productos</a>
+                    <a href="#testimonios"><i class="fas fa-comment"></i> Testimonios</a>
+                    <a href="#pedido"><i class="fas fa-shopping-cart"></i> Hacer Pedido</a>
+                </div>
+                
+                <a href="#pedido" class="nav-cta">Pedir Ahora</a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInDown">Flores <span>Eternas</span> Santiago</h1>
+            <div class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Globos | Flores | Regalos | Arreglos</div>
+            <p class="animate__animated animate__fadeInUp animate__delay-2s">Flores artesanales de tela de alta calidad que conservan su belleza para siempre. Perfectas para regalos especiales, decoración del hogar o eventos memorables.</p>
+            
+            <div class="quote animate__animated animate__fadeIn animate__delay-3s">
+                "Deja que las flores hablen por ti.... ✨️"
+            </div>
+            
+            <a href="#pedido" class="cta-button animate__animated animate__fadeInUp animate__delay-4s">
+                <i class="fas fa-gift"></i> Realizar Pedido
+            </a>
+        </div>
+        <div class="hero-decoration"></div>
+    </section>
+
+    <!-- Sección Estadísticas -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-text">Años de Experiencia</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">Calidad Artesanal</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Atención al Cliente</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="section" id="sobre-nosotros">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Sobre Nosotros</h2>
+            </div>
+            <div class="section-subtitle fade-in">
+                Creando momentos especiales con flores que perduran para siempre
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3>Flores Eternas Santiago</h3>
+                    <p>Somos una florería especializada en la creación de flores eternas hechas a mano con telas de la más alta calidad. Cada flor es cuidadosamente diseñada y elaborada para capturar la belleza natural de las flores, pero con la ventaja de que nunca se marchitarán.</p>
+                    <p>Además de nuestras flores eternas, ofrecemos una variedad de globos decorativos, regalos creativos y arreglos personalizados para cualquier ocasión especial. Nos apasiona crear momentos memorables a través de detalles únicos y personalizados.</p>
+                    
+                    <div class="business-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>Ubicación:</strong> Santiago, República Dominicana</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Horario:</strong> 9:00 AM – 6:00 PM</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <span><strong>Anticipación:</strong> Pedidos con mínimo 2 días de anticipación</span>
+                        </div>
+                        
+                        <div class="payment-methods">
+                            <h4>Métodos de Pago Aceptados:</h4>
+                            <div class="payment-icons">
+                                <div class="payment-icon"><i class="fas fa-university"></i> Transferencia</div>
+                                <div class="payment-icon"><i class="fas fa-landmark"></i> Asociación Cibao</div>
+                                <div class="payment-icon"><i class="fas fa-building"></i> Banreserva</div>
+                                <div class="payment-icon"><i class="fas fa-credit-card"></i> Débito</div>
+                                <div class="payment-icon"><i class="fas fa-money-bill-wave"></i> Efectivo</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="ceo-tag">CEO: @wannairy0</p>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1560743173-567a3b5658b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flores eternas de tela">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section class="section services" id="servicios">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Nuestros Servicios</h2>
+            </div>
+            <div class="section-subtitle fade-in">
+                Ofrecemos una amplia gama de productos y servicios para todas tus ocasiones especiales
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Globos Decorativos</h3>
+                    <p>Globos personalizados para cumpleaños, bodas, baby showers y eventos especiales. Diseños creativos y únicos con los mejores materiales.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Flores Eternas</h3>
+                    <p>Flores artesanales de tela que conservan su belleza para siempre. Perfectas para regalos especiales y decoración de interiores.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Regalos Personalizados</h3>
+                    <p>Cajas de regalo, arreglos temáticos y detalles únicos para sorprender en cualquier ocasión especial. Personalización completa.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Arreglos Florales</h3>
+                    <p>Creaciones únicas combinando flores eternas, globos y otros elementos decorativos para cada ocasión especial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section class="section testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Lo que dicen nuestros clientes</h2>
+            </div>
+            
+            <div class="testimonial-slider fade-in">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Las flores eternas que compré para mi aniversario fueron perfectas. Siguen igual de hermosas que el primer día. ¡El mejor regalo que he hecho!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente satisfecha" class="author-avatar">
+                        <div class="author-info">
+                            <h4>María Rodríguez</h4>
+                            <p>Santiago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Productos -->
+    <section class="section products" id="productos">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Nuestros Productos Destacados</h2>
+            </div>
+            <div class="section-subtitle fade-in">
+                Explora nuestra colección de productos únicos y personalizados
+            </div>
+            
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product-card fade-in">
+                    <div class="product-badge">Más Vendido</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ramo de rosas eternas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ramo de Rosas Eternas</h3>
+                        <p>Elegante ramo de rosas eternas en tonos rojos y rosados. Presentado en una caja de regalo premium. Perfecto para aniversarios y declaraciones de amor.</p>
+                        <div class="price-note">
+                            <i class="fas fa-comment-dollar"></i> Precio a consultar por DM
+                        </div>
+                        <button class="order-btn" data-product="Ramo de Rosas Eternas">
+                            <i class="fas fa-cart-plus"></i> Seleccionar
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card fade-in">
+                    <div class="product-badge">Nuevo</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1563178977-1a7fb7249f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tulipanes eternos">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tulipanes Eternos</h3>
+                        <p>Arreglo de tulipanes en tonos pastel. Perfecto para decorar cualquier espacio con un toque de delicadeza y elegancia moderna.</p>
+                        <div class="price-note">
+                            <i class="fas fa-comment-dollar"></i> Precio a consultar por DM
+                        </div>
+                        <button class="order-btn" data-product="Tulipanes Eternos">
+                            <i class="fas fa-cart-plus"></i> Seleccionar
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="product-card fade-in">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Globos decorativos">
+                    </div>
+                    <div class="product-info">
+                        <h3>Globos Decorativos</h3>
+                        <p>Set de globos metálicos, confeti y decoraciones temáticas para cumpleaños, baby showers y celebraciones especiales.</p>
+                        <div class="price-note">
+                            <i class="fas fa-comment-dollar"></i> Precio a consultar por DM
+                        </div>
+                        <button class="order-btn" data-product="Globos Decorativos">
+                            <i class="fas fa-cart-plus"></i> Seleccionar
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="product-card fade-in">
+                    <div class="product-badge">Premium</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Caja de regalo">
+                    </div>
+                    <div class="product-info">
+                        <h3>Caja de Regalo Premium</h3>
+                        <p>Caja decorativa con flores eternas, globos y otros detalles personalizados. Ideal para sorprender en ocasiones especiales.</p>
+                        <div class="price-note">
+                            <i class="fas fa-comment-dollar"></i> Precio a consultar por DM
+                        </div>
+                        <button class="order-btn" data-product="Caja de Regalo Premium">
+                            <i class="fas fa-cart-plus"></i> Seleccionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Pedido -->
+    <section class="section" id="pedido">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Realiza tu Pedido</h2>
+            </div>
+            <div class="section-subtitle fade-in">
+                Completa el formulario y nos pondremos en contacto contigo para confirmar los detalles
+            </div>
+            
+            <div class="order-form-container fade-in">
+                <div class="order-instructions">
+                    <h4><i class="fas fa-info-circle"></i> Instrucciones Importantes:</h4>
+                    <ul>
+                        <li>Los pedidos deben realizarse con un mínimo de <strong>2 días de anticipación</strong>.</li>
+                        <li>Para confirmar su pedido se requiere el <strong>50% de anticipo</strong>.</li>
+                        <li>Una vez confirmado el pedido <strong>no hay cambios ni cancelaciones</strong>.</li>
+                        <li>Aceptamos pagos por transferencia (Asociación Cibao y Banreserva), débito y en efectivo.</li>
+                        <li>El precio final se confirma por DM según el arreglo seleccionado.</li>
+                    </ul>
+                </div>
+                
+                <div class="order-form">
+                    <h3>Formulario de Pedido</h3>
+                    <form id="pedidoForm">
+                        <div class="form-group">
+                            <label for="nombre"><i class="fas fa-user"></i> Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono"><i class="fas fa-phone"></i> Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required placeholder="Tu número de teléfono">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="direccion"><i class="fas fa-map-marker-alt"></i> Dirección de Entrega (Santiago, RD) *</label>
+                            <input type="text" id="direccion" name="direccion" required placeholder="Dirección completa para entrega">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fecha-entrega"><i class="fas fa-calendar-alt"></i> Fecha Deseada de Entrega *</label>
+                            <input type="date" id="fecha-entrega" name="fecha-entrega" required min="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-box"></i> Selecciona tu Producto *</label>
+                            <div class="product-select" id="productSelect">
+                                <div class="product-option">
+                                    <input type="radio" id="producto1" name="producto" value="Ramo de Rosas Eternas" required>
+                                    <label for="producto1">Ramo de Rosas Eternas</label>
+                                </div>
+                                
+                                <div class="product-option">
+                                    <input type="radio" id="producto2" name="producto" value="Tulipanes Eternos" required>
+                                    <label for="producto2">Tulipanes Eternos</label>
+                                </div>
+                                
+                                <div class="product-option">
+                                    <input type="radio" id="producto3" name="producto" value="Globos Decorativos" required>
+                                    <label for="producto3">Globos Decorativos</label>
+                                </div>
+                                
+                                <div class="product-option">
+                                    <input type="radio" id="producto4" name="producto" value="Caja de Regalo Premium" required>
+                                    <label for="producto4">Caja de Regalo Premium</label>
+                                </div>
+                                
+                                <div class="product-option">
+                                    <input type="radio" id="producto5" name="producto" value="Arreglo Personalizado" required>
+                                    <label for="producto5">Arreglo Personalizado</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje"><i class="fas fa-edit"></i> Detalles del Pedido (Opcional)</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Especificaciones, colores preferidos, ocasión, dedicatoria, etc."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Enviar Solicitud de Pedido
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Flores Eternas Santiago</h3>
+                    <p>Globos | Flores | Regalos | Arreglos</p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Santiago, República Dominicana</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Horario: 9:00 AM – 6:00 PM</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Pedidos con 2+ días de anticipación</span>
+                        </div>
+                    </div>
+                    <p class="ceo-tag">CEO: @wannairy0</p>
+                    
+                    <div class="quote-footer">
+                        "Deja que las flores hablen por ti.... ✨️"
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Información de Pedidos</h3>
+                    <p>• Confirmación con 50% de anticipo</p>
+                    <p>• Sin cambios ni cancelaciones después de confirmado</p>
+                    <p>• Entregas en Santiago, RD</p>
+                    <p>• Precios a consultar por DM según arreglo</p>
+                    <p>• Atención personalizada</p>
+                    <p>• Productos 100% artesanales</p>
+                    
+                    <div class="footer-newsletter">
+                        <h4>Suscríbete a nuestras novedades</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Tu email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contáctanos</h3>
+                    <p>Realiza tus pedidos por DM o WhatsApp:</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/floreseternas_stg" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/18091234567" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="payment-icons" style="margin-top: 30px;">
+                        <div class="payment-icon" style="font-size: 0.8rem; padding: 8px 12px;"><i class="fas fa-shield-alt"></i> Pago Seguro</div>
+                        <div class="payment-icon" style="font-size: 0.8rem; padding: 8px 12px;"><i class="fas fa-truck"></i> Entrega Rápida</div>
+                        <div class="payment-icon" style="font-size: 0.8rem; padding: 8px 12px;"><i class="fas fa-award"></i> Calidad Garantizada</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Flores Eternas Santiago. Todos los derechos reservados. | Santiago, República Dominicana</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/18091234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal de confirmación -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>¡Solicitud de Pedido Preparada!</h3>
+            <p>Tu solicitud ha sido preparada para enviarse. Por favor, elige cómo quieres contactarnos para confirmar tu pedido:</p>
+            <p id="orderSummary" style="text-align: left; background-color: #f9f9f9; padding: 25px; border-radius: 15px; margin: 25px 0; border-left: 5px solid var(--primary-color);"></p>
+            
+            <div class="modal-links">
+                <a href="https://instagram.com/floreseternas_stg" target="_blank" class="modal-instagram-link" id="instagramLink">
+                    <i class="fab fa-instagram"></i> Enviar por Instagram DM
+                </a>
+                
+                <a href="https://wa.me/18091234567" target="_blank" class="modal-whatsapp-link" id="whatsappLink">
+                    <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                </a>
+            </div>
+            
+            <p style="margin-top: 25px; font-size: 0.95rem; color: #666; padding: 15px; background: rgba(230, 57, 70, 0.05); border-radius: 10px;">
+                <strong><i class="fas fa-exclamation-circle"></i> Recuerda:</strong> El pedido se confirma con el 50% de anticipo. Precio final a consultar por DM.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales para almacenar los datos del pedido
+        let pedidoData = {};
+        
+        // Menú móvil
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Configurar fecha mínima en el formulario (2 días a partir de hoy)
+        const fechaEntregaInput = document.getElementById('fecha-entrega');
+        const hoy = new Date();
+        const fechaMinima = new Date();
+        fechaMinima.setDate(hoy.getDate() + 2); // Mínimo 2 días de anticipación
+        
+        const fechaMinimaFormato = fechaMinima.toISOString().split('T')[0];
+        fechaEntregaInput.min = fechaMinimaFormato;
+        
+        // Selección de productos en el formulario
+        document.querySelectorAll('.product-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Remover selección previa
+                document.querySelectorAll('.product-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Marcar como seleccionado
+                this.classList.add('selected');
+                
+                // Seleccionar el radio button
+                const radio = this.querySelector('input[type="radio"]');
+                radio.checked = true;
+            });
+        });
+        
+        // Botones de selección de productos en la galería
+        document.querySelectorAll('.order-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                
+                // Desplazar a la sección de pedidos
+                document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
+                
+                // Seleccionar el producto correspondiente en el formulario
+                const productId = getProductIdByName(productName);
+                if (productId) {
+                    const radioButton = document.getElementById(productId);
+                    if (radioButton) {
+                        radioButton.checked = true;
+                        
+                        // Marcar la opción como seleccionada
+                        document.querySelectorAll('.product-option').forEach(option => {
+                            option.classList.remove('selected');
+                            if (option.querySelector('input').id === productId) {
+                                option.classList.add('selected');
+                            }
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Función para obtener el ID del producto por nombre
+        function getProductIdByName(productName) {
+            const products = {
+                'Ramo de Rosas Eternas': 'producto1',
+                'Tulipanes Eternos': 'producto2',
+                'Globos Decorativos': 'producto3',
+                'Caja de Regalo Premium': 'producto4'
+            };
+            
+            return products[productName] || null;
+        }
+        
+        // Manejo del formulario
+        const pedidoForm = document.getElementById('pedidoForm');
+        const confirmationModal = document.getElementById('confirmationModal');
+        const modalClose = document.getElementById('modalClose');
+        const orderSummary = document.getElementById('orderSummary');
+        const instagramLink = document.getElementById('instagramLink');
+        const whatsappLink = document.getElementById('whatsappLink');
+        
+        pedidoForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validar que la fecha sea al menos 2 días después
+            const fechaSeleccionada = new Date(fechaEntregaInput.value);
+            if (fechaSeleccionada < fechaMinima) {
+                alert('Por favor selecciona una fecha con al menos 2 días de anticipación.');
+                return;
+            }
+            
+            // Obtener datos del formulario
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Formatear fecha para mostrar
+            const fechaFormateada = new Date(data['fecha-entrega']).toLocaleDateString('es-DO', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Almacenar datos para el resumen
+            pedidoData = data;
+            
+            // Crear resumen del pedido
+            const summaryText = `
+                <strong><i class="fas fa-user"></i> Nombre:</strong> ${data.nombre}<br>
+                <strong><i class="fas fa-phone"></i> Teléfono:</strong> ${data.telefono}<br>
+                <strong><i class="fas fa-envelope"></i> Email:</strong> ${data.email}<br>
+                <strong><i class="fas fa-map-marker-alt"></i> Dirección:</strong> ${data.direccion}<br>
+                <strong><i class="fas fa-calendar-alt"></i> Fecha de entrega:</strong> ${fechaFormateada}<br>
+                <strong><i class="fas fa-box"></i> Producto:</strong> ${data.producto}<br>
+                <strong><i class="fas fa-edit"></i> Detalles:</strong> ${data.mensaje || 'Ninguno'}
+            `;
+            
+            orderSummary.innerHTML = summaryText;
+            
+            // Crear mensaje para Instagram y WhatsApp
+            const mensaje = `¡Hola! Quiero hacer un pedido en Flores Eternas Santiago:%0A%0A*Nombre:* ${data.nombre}%0A*Teléfono:* ${data.telefono}%0A*Email:* ${data.email}%0A*Dirección:* ${data.direccion}%0A*Fecha de entrega:* ${fechaFormateada}%0A*Producto:* ${data.producto}%0A*Detalles:* ${data.mensaje || 'Sin detalles adicionales'}%0A%0A*Nota:* Entiendo que el pedido requiere 50% de anticipo para confirmar y no permite cambios ni cancelaciones después de confirmado.`;
+            
+            // Actualizar enlaces
+            instagramLink.href = `https://instagram.com/floreseternas_stg?${mensaje}`;
+            whatsappLink.href = `https://wa.me/18091234567?text=${mensaje}`;
+            
+            // Mostrar modal
+            confirmationModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Limpiar formulario
+            pedidoForm.reset();
+            document.querySelectorAll('.product-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Restablecer fecha mínima
+            const nuevaFechaMinima = new Date();
+            nuevaFechaMinima.setDate(hoy.getDate() + 2);
+            fechaEntregaInput.min = nuevaFechaMinima.toISOString().split('T')[0];
+        });
+        
+        // Cerrar modal
+        modalClose.addEventListener('click', () => {
+            confirmationModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Cerrar modal al hacer clic fuera
+        window.addEventListener('click', (e) => {
+            if (e.target === confirmationModal) {
+                confirmationModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Efecto de aparición al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observar elementos con clase fade-in
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Actualizar año en el footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const year = new Date().getFullYear();
+            const copyrightElement = document.querySelector('.copyright p');
+            if (copyrightElement) {
+                copyrightElement.innerHTML = copyrightElement.innerHTML.replace('2023', year);
+            }
+            
+            // Añadir clase fade-in a elementos que no la tengan
+            document.querySelectorAll('.section-title, .section-subtitle, .about-content > *').forEach(el => {
+                if (!el.classList.contains('fade-in')) {
+                    el.classList.add('fade-in');
+                    observer.observe(el);
+                }
+            });
+        });
+        
+        // Efecto de hover en tarjetas de productos y servicios
+        document.querySelectorAll('.product-card, .service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.zIndex = '10';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+    </script>
+</body>
+</html>
